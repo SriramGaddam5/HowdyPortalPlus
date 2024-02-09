@@ -9,6 +9,10 @@ import {
   Center,
   ButtonGroup,
   IconButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
@@ -45,24 +49,40 @@ function Navbar() {
         </Center>
         <Spacer />
         <ButtonGroup spacing={2}>
-          <Tooltip label="Profile" rounded="lg">
-            <IconButton
-              variant="ghost"
-              colorScheme="whiteAlpha"
-              color="white"
-              p={5}
-              icon={<CgProfile size="30" />}
-            />
-          </Tooltip>
-          <Tooltip label="Notifications" rounded="lg">
-            <IconButton
-              variant="ghost"
-              colorScheme="whiteAlpha"
-              color="white"
-              p={5}
-              icon={<IoNotificationsOutline size="30" />}
-            />
-          </Tooltip>
+          <Menu>
+            <Tooltip label="Profile" rounded="lg">
+              <MenuButton
+                as={IconButton}
+                variant="ghost"
+                colorScheme="whiteAlpha"
+                color="white"
+                p={5}
+                icon={<CgProfile size="30" />}
+              />
+            </Tooltip>
+            <MenuList color="black">
+              <MenuItem>Profile</MenuItem>
+              <MenuItem>Settings</MenuItem>
+              <MenuItem>Logout</MenuItem>
+            </MenuList>
+          </Menu>
+          <Menu>
+            <Tooltip label="Notifications" rounded="lg">
+              <MenuButton
+                as={IconButton}
+                variant="ghost"
+                colorScheme="whiteAlpha"
+                color="white"
+                p={5}
+                icon={<IoNotificationsOutline size="30" />}
+              />
+            </Tooltip>
+            <MenuList color="black">
+              <MenuItem>Notifications</MenuItem>
+              <MenuItem>Alerts</MenuItem>
+              <MenuItem>Holds</MenuItem>
+            </MenuList>
+          </Menu>
         </ButtonGroup>
       </Flex>
     </div>
