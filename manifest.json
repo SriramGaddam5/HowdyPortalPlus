@@ -1,0 +1,12 @@
+{
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://howdy.tamu.edu/*"]
+    }
+  ],
+  "manifest_version": 3,
+  "name": "Howdy Portal Plus",
+  "description": "Howdy Portal Plus is a Chrome extension that enhances the Texas A&M Howdy Portal experience.",
+  "version": "1.0"
+}
